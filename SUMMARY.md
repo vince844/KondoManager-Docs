@@ -18,4 +18,4 @@
 
 ## Sviluppatori
 
-* [Gestione permessi frontend](sviluppatori/gestione-permessi-frontend.md)
+* [Gestione ruoli e permessi lato frontend](sviluppatori/gestione-ruoli-e-permessi-lato-frontend.md)
