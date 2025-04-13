@@ -1,5 +1,5 @@
 ---
-description: Gestione dei ruoi utente
+description: Gestione dei ruoli utente
 icon: masks-theater
 ---
 
