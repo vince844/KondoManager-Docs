@@ -1,5 +1,6 @@
 ---
 description: Gestione dei ruoi utente
+icon: masks-theater
 ---
 
 # Ruoli utente
