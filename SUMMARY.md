@@ -9,6 +9,8 @@
 
 ## Basics
 
+* [Ruoli utente](basics/ruoli-utente.md)
+* [Gestione utenti](basics/gestione-utenti.md)
 * [Editor](basics/editor.md)
 * [Markdown](basics/markdown.md)
 * [Images & media](basics/images-and-media.md)

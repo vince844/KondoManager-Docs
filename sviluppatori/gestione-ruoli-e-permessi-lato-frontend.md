@@ -1,5 +1,6 @@
 ---
 description: Guida alla gestione dei ruoli e permessi utente lato frontend
+icon: key
 ---
 
 # Gestione ruoli e permessi lato frontend
