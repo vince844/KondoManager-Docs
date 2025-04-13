@@ -8,12 +8,15 @@ La **usePermission composable** è altamente flessibile e permette di gestire si
 
 ### Come funziona la usePermission
 
-* **hasRole(roles)**: Controlla se l'utente ha almeno un ruolo di quelli specificati nell'array.
-* **hasPermission(permissions)**: Controlla se l'utente ha almeno un permesso di quelli specificati nell'array.
-* **canAccess(item)**: La funzione più flessibile:
-  * Se si pass un array di permessi **permissions array** (`string[]`), la funzione controlla se l'utente ha uno di questi permessi.
-  * Se si passa un **NavItem** oppure un semplice object con `role?` e `permissions?`, la funzione controlla se i ruoli e i permessi sono presenti.
-  * Se non vienne passato nessun `role` o `permissions` l'accesso verrà garantito di default.
+* **`hasRole(roles: string[])`**\
+  Controlla se l'utente ha almeno **uno** dei ruoli specificati.
+* **`hasPermission(permissions: string[])`**\
+  Controlla se l'utente ha almeno **uno** dei permessi specificati.
+* **`canAccess(item)`**\
+  La funzione più flessibile:
+  * Se riceve un **array di permessi** (`string[]`), verifica se l'utente ha almeno uno di quei permessi.
+  * Se riceve un **oggetto con `role?` e/o `permissions?`**, verifica se almeno uno dei ruoli o permessi è presente.
+  * Se **non vengono passati né ruoli né permessi**, l'accesso viene **garantito** di default.
 
 ### Come utilizzare la usePermission
 
