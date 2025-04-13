@@ -70,15 +70,15 @@ Se si vuole controllare sia la presenza di uno o più ruoli che la presenza di u
 ```
 const { canAccess } = usePermission();
 
-if (canAccess({ role: ['amministratore'], permissions: ['modifica utenti'] })) {
+if (canAccess({ roles: ['amministratore'], permissions: ['modifica utenti'] })) {
   console.log('Questo utente può essere un amministratore oppure avere permessi per modificare gli utenti');
 }
 ```
 
-Mostra un elemento se l'utente ha un ruolo oppure iun permesso
+Mostra un elemento se l'utente ha un ruolo o più di uno oppure un permesso o più d uno
 
 ```
-<div v-if="canAccess({ role: ['amministratore'], permissions: ['elimina utente'] })">
+<div v-if="canAccess({ roles: ['amministratore'], permissions: ['elimina utente'] })">
   Puoi accedere a questo elemento
 </div>
 ```
@@ -89,7 +89,7 @@ Mostra un elemento se l'utente ha un ruolo oppure iun permesso
 
 ```
 const items: NavItem[] = [
-  { title: 'Dashboard', href: '/dashboard', role: ['amministratore'] },
+  { title: 'Dashboard', href: '/dashboard', roles: ['amministratore'] },
   { title: 'Segnalazioni', href: '/utenti', permissions: ['visualizza utenti'] },
 ];
 
@@ -110,7 +110,7 @@ const canSeeDeleteButton = computed(() =>
 );
 
 const isAdminOrCanEdit = computed(() =>
-  canAccess({ role: ['amministratore'], permissions: ['Modifica segnalazioni'] })
+  canAccess({ roles: ['amministratore'], permissions: ['Modifica segnalazioni'] })
 );
 ```
 
