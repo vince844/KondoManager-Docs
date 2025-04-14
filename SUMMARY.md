@@ -9,6 +9,8 @@
 
 ## Basics
 
+* [Segnalzioni guasto](basics/segnalzioni-guasto/README.md)
+  * [Nuova segnalazione](basics/segnalzioni-guasto/nuova-segnalazione.md)
 * [Ruoli utente](basics/ruoli-utente.md)
 * [Gestione utenti](basics/gestione-utenti.md)
 

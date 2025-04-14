@@ -17,7 +17,7 @@ Quindi selezinare la voce di menù "**Ruoli**", questa schermata visualizzerà u
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-04-13 at 22.44.31.png" alt=""><figcaption></figcaption></figure>
 
-### Creazione di un nuovo ruolo
+### Creazione ruolo
 
 Di seguito la schermata con il modulo per la creazione di un nuovo ruolo.&#x20;
 
@@ -25,7 +25,7 @@ Di seguito la schermata con il modulo per la creazione di un nuovo ruolo.&#x20;
 
 Il campo nome e descrizione sono obbligatori. Il campo permessi permette di attribuire dei permessi specifici per il nuovo ruolo
 
-### Modifica di un ruolo
+### Modifica ruolo
 
 I ruoli di default non sono modificabili, è invece possibile modificare e personalizzare i ruoli creati. Per modificare un ruolo cliccare sulla voce "**Modifica**" nel menù a tendina presente nella lista dei ruoli cliccando sul pulsante "..." alla destra del ruolo, come da immagine.
 
@@ -35,7 +35,7 @@ La pagina per la modifica del ruolo mostrerà il nome, la descrizione e i permes
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-04-13 at 23.04.17.png" alt=""><figcaption></figcaption></figure>
 
-### Eliminare un ruolo
+### Elimina ruolo
 
 I ruoli di default non sono eliminabili, è invece possibile eliminare i ruoli creati. Per eliminare un ruolo cliccare sulla voce "**Elimina**" nel menù a tendina presente nella lista dei ruoli cliccando sul pulsante "..." alla destra del ruolo, come da immagine. Verrà mostrato un popup per la conferma dell'azione cliccando sulla voce "**Continua**" oppure cancellare l'azione cliccando sulla voce "**Cancella**"
 
