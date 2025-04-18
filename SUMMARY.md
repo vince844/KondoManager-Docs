@@ -16,4 +16,5 @@
 
 ## Sviluppatori
 
-* [Gestione ruoli e permessi lato frontend](sviluppatori/gestione-ruoli-e-permessi-lato-frontend.md)
+* [Composables](sviluppatori/composables/README.md)
+  * [Gestione ruoli e permessi lato frontend](sviluppatori/composables/gestione-ruoli-e-permessi-lato-frontend.md)
