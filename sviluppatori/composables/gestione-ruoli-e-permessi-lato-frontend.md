@@ -9,15 +9,19 @@ La **usePermission composable** è altamente flessibile e permette di gestire si
 
 ### Come funziona la usePermission
 
-* **`hasRole(roles: string[])`**\
+* [**`hasRole(roles: string[])`**](gestione-ruoli-e-permessi-lato-frontend.md#funzione-hasrole-per-controllare-uno-o-piu-ruoli)\
   Controlla se l'utente ha almeno **uno** dei ruoli specificati.
-* **`hasPermission(permissions: string[])`**\
+* [**`hasPermission(permissions: string[])`**](gestione-ruoli-e-permessi-lato-frontend.md#funzione-haspermission-per-controllare-uno-o-piu-permessi)\
   Controlla se l'utente ha almeno **uno** dei permessi specificati.
-* **`canAccess(item)`**\
+* [**`canAccess(item)`**](gestione-ruoli-e-permessi-lato-frontend.md#funzione-canaccess-per-controllare-sia-ruolo-che-permessi)\
   La funzione più flessibile:
   * Se riceve un **array di permessi** (`string[]`), verifica se l'utente ha almeno uno di quei permessi.
   * Se riceve un **oggetto con `role?` e/o `permissions?`**, verifica se almeno uno dei ruoli o permessi è presente.
   * Se **non vengono passati né ruoli né permessi**, l'accesso viene **garantito** di default.
+* [`generatePath(path: string)`](gestione-ruoli-e-permessi-lato-frontend.md#funzione-generatepath-per-creare-url-di-navigazione)\
+  Permette di creare URL a seconda del ruolo utente.
+* [`generateRoute(routeName: string)`](gestione-ruoli-e-permessi-lato-frontend.md#funzione-generateroute-per-creare-routes-di-navigazione)\
+  Permette di creare Route a seconda del ruolo utente
 
 ### Come utilizzare la usePermission
 
@@ -85,6 +89,36 @@ Mostra un elemento se l'utente ha un ruolo o più di uno oppure un permesso o pi
 <div v-if="canAccess({ roles: ['amministratore'], permissions: ['elimina utente'] })">
   Puoi accedere a questo elemento
 </div>
+```
+
+#### Funzione generatePath per creare url di navigazione
+
+Questa funzione permette di create url di navigazione dinamici in base al ruolo utente (di defaul per i ruoli admministratori e collaboratori l'url diventa **admin/** mentre per tutti gli altri ruoli diventa **user/** in questo modo è possibile gestire diversi controllers
+
+```
+const mainNavItems: NavItem[] = [
+    {
+        title: 'Dashboard',
+        href: generatePath('dashboard'),
+        icon: LayoutGrid
+    }
+];
+```
+
+#### Funzione generateRoute per creare routes di navigazione
+
+Questa funzione permette di creare routes di navigazione dinamici in base al ruolo utente (di defaul per i ruoli admministratori e collaboratori l'url diventa **admin.** mentre per tutti gli altri ruoli diventa **user.** in questo modo è possibile gestire diversi controllers utilizzando le routes di inertia ad esmpio all'interno dei Links
+
+```
+  <Button size="sm" class="lg:flex h-8 w-full lg:w-auto">
+    <List class="w-4 h-4" />
+    <Link 
+        :href = "route(generateRoute('segnalazioni.index'))"
+        class="block lg:inline"
+    >
+    Elenco 
+    </Link>
+</Button>
 ```
 
 #### Utilizzo all'interno di un menù di navigazione
